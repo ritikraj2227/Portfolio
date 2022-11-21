@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Balsamiq Sans', sans-serif;
 }
 /* home  */
 .home {
@@ -108,7 +111,7 @@
 }
 .about-content img {
   height: 200px;
-  width: 150px;
+  margin-left: 115px;
   object-fit: cover;
 }
 
@@ -125,7 +128,7 @@
 
 /* left-content */
 .about-content .left-content {
-  flex-basis: 45%;
+  flex-basis: 43%;
 }
 
 .left-content a {
@@ -153,7 +156,7 @@
 
 /* progress-bar */
 .progress {
-  padding: 25px 30px;
+  padding: 10px 30px;
 }
 
 .progress .progress-bar {
@@ -194,7 +197,7 @@
 }
 
 .progress-line .bootstrap {
-  width: 50%;
+  width: 75%;
 }
 
 .progress-line .js {
@@ -203,6 +206,9 @@
 
 .progress-line .php {
   width: 50%;
+}
+.progress-line .react {
+  width: 40%;
 }
 
 .-progress-bar .progress-line span::before {
@@ -239,7 +245,7 @@
 }
 
 .progress-line .bootstrap::after {
-  content: "50%";
+  content: "75%";
 }
 
 .progress-line .js::after {
@@ -248,6 +254,9 @@
 
 .progress-line .php::after {
   content: "50%";
+}
+.progress-line .react::after {
+  content: "40%";
 }
 
 /* end progress-bar */
@@ -266,7 +275,7 @@
   color: #fbeceb;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1.7rem;
+  margin-bottom: 1rem;
 }
 
 .project-1 {
@@ -277,9 +286,11 @@
 
 .project-1 img {
   height: 250px;
-  width: 300px;
-  object-fit: contain;
-  border-radius: 50%;
+  width: 195px;
+  object-fit: fill;
+  border-radius: 10%;
+  margin: 5px 30px;
+
 }
 
 .project-1 .project-1-details {
@@ -352,6 +363,9 @@
   color: #fbeceb;
   font-size: 1rem;
   padding-bottom: 0.5rem;
+}
+.contact-content .email a:hover{
+  border: none;
 }
 
 .contact-content .links {
