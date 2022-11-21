@@ -399,6 +399,9 @@
     flex-basis: 100%;
     text-align: center;
   }
+  .about-content img{
+    margin-left: 5px;
+  }
   .about-content .right-content{
     flex-basis: 100%;
     width: 100%;
@@ -451,6 +454,9 @@
     flex-basis: 100%;
     text-align: center;
   }
+  .about-content img{
+    margin-left: 0px;
+  }
   .about-content .right-content{
     flex-basis: 100%;
     width: 100%;
@@ -501,7 +507,10 @@
     .about-content .left-content {
        flex-basis: 100%;
        text-align: center;
-     }
+    }
+     .about-content img{
+      margin-left: 5px;
+    }
      .about-content .right-content{
        flex-basis: 100%;
        width: 100%;
