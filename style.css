@@ -48,11 +48,30 @@
 .nav-items a {
   text-decoration: none;
   font-size: 1.2rem;
-  padding: 0.2rem;
   color: #fbeceb;
 }
-.nav-items a:hover {
-  border-bottom: 2px solid #fbeceb;
+.nav-items a::after {
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.5s ease;
+}
+.nav-items a:hover::after {
+  width: 110%;
+  height: 2px;
+  background-color: #fbeceb;
+}
+
+.nav-items .active::after{
+  content: "";
+  position: relative;
+  width: 110%;
+  height: 2px;
+  display: block;
+  background-color: #fbeceb;
+  
 }
 /* navbar end */
 
@@ -99,7 +118,7 @@
 
 .about {
   /* height: 100vh; */
-  padding: 7rem 0;
+  padding: 5.5rem 0;
   background-color: #45a29e;
 }
 
@@ -110,7 +129,7 @@
   text-align: center;
 }
 .about-content img {
-  height: 200px;
+  height: 175px;
   margin-left: 115px;
   object-fit: cover;
 }
@@ -134,12 +153,22 @@
 .left-content a {
   color: #002447;
   text-decoration: none;
+  display: inline-block;
 }
 
-.left-content a:hover {
-  border-bottom: 2px solid #002447;
+.left-content a::after {
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.5s ease;
 }
-
+.left-content a:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #002447;
+}
 /* end left-content */
 
 /* right-content */
@@ -174,18 +203,31 @@
 }
 
 .progress .progress-bar .progress-line {
-  position: relative;
-  height: 10px;
-  width: 550px;
-  background: #f0f0f0;
-  border-radius: 10px;
-}
+    position: relative;
+    height: 10px;
+    width: 550px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: progressanimation 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+
 
 .progress-bar .progress-line span {
-  position: absolute;
-  background: #002447;
-  height: 100%;
-  border-radius: 10px;
+    position: absolute;
+    background: #002447;
+    height: 100%;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: progressanimation 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes progressanimation {
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 .progress-line .html {
@@ -201,14 +243,14 @@
 }
 
 .progress-line .js {
-  width: 50%;
+  width: 60%;
 }
 
 .progress-line .php {
   width: 50%;
 }
 .progress-line .react {
-  width: 40%;
+  width: 50%;
 }
 
 .-progress-bar .progress-line span::before {
@@ -249,14 +291,14 @@
 }
 
 .progress-line .js::after {
-  content: "50%";
+  content: "60%";
 }
 
 .progress-line .php::after {
   content: "50%";
 }
 .progress-line .react::after {
-  content: "40%";
+  content: "50%";
 }
 
 /* end progress-bar */
@@ -364,14 +406,23 @@
   font-size: 1rem;
   padding-bottom: 0.5rem;
 }
-.contact-content .email a:hover{
-  border: none;
+.contact-content .email a::after{
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.5s ease;
 }
 
+.contact-content .email a:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #002447;
+}
 .contact-content .links {
   color: #002447;
   padding: 0.5rem;
-  padding-bottom: 1.5rem;
   font-size: 1rem;
 }
 
@@ -379,11 +430,21 @@
   text-decoration: none;
   color: #002447;
   padding: 0.5rem;
+  display: inline-block;
 }
 
-.contact-content a:hover {
-  color: #004b96;
-  border-bottom: 2px solid #004b96;
+.link-icon a::after {
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 1px;
+  display: block;
+  transition: all 0.5s ease;
+}
+.link-icon a:hover::after {
+  width: 100%;
+  height: 1px;
+  background-color: #002447;
 }
 
 /* end contact */
