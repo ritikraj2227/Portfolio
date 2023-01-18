@@ -64,15 +64,11 @@
   background-color: #fbeceb;
 }
 
-.nav-items .active::after{
-  content: "";
-  position: relative;
-  width: 110%;
-  height: 2px;
-  display: block;
-  background-color: #fbeceb;
-  
+.nav-items a.active{
+  text-decoration: underline;
+  color: white;
 }
+
 /* navbar end */
 
 /* home content  */
@@ -454,6 +450,10 @@
 @media (max-width: 500px) {
   html {
     font-size: 60%;
+  }
+
+  .about{
+    padding-top: 8.2rem;
   }
 
   .about-content .left-content {

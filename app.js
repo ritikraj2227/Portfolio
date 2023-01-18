@@ -28,3 +28,5 @@ var navcolor = function(){
 
  
 window.addEventListener("scroll", navcolor);
+
+
