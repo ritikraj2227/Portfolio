@@ -24,7 +24,7 @@ var navcolor = function () {
 window.addEventListener('scroll', navcolor);
 
 var typing = new Typed('.text', {
-	strings: ['Ritik Raj.', 'Web Developer.', 'Web Designer.'],
+	strings: ['Ritik Raj.', 'A Web Developer.', 'A Web Designer.'],
 	typeSpeed: 100,
 	backSpeed: 40,
 	loop: true,
